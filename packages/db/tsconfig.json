@@ -1,0 +1,10 @@
+{
+  "extends": "@template/tsconfig/internal.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "preserveSymlinks": true
+  },
+  "include": [".ts", "src", "migrations"],
+  "exclude": ["node_modules"]
+}

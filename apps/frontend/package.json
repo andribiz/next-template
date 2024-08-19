@@ -1,0 +1,33 @@
+{
+  "name": "template-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@template/tailwind-config": "workspace:*",
+    "@template/auth": "workspace:*",
+    "@template/db": "workspace:*",
+    "@template/ui": "workspace:*",
+    "framer-motion": "^11.3.28",
+    "next": "14.2.5",
+    "next-sitemap": "^4.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.2",
+    "react-use": "^17.5.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@template/tsconfig": "workspace:*",
+    "@types/node": "^22.4.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4"
+  }
+}

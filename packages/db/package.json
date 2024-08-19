@@ -1,0 +1,36 @@
+{
+  "name": "@template/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "biome check ./src --unsafe --write --organize-imports-enabled=true",
+    "lint": "biome lint ./src",
+    "db:generate": "pnpm with-env drizzle-kit generate",
+    "db:migrate": "pnpm with-env drizzle-kit migrate",
+    "db:pull": "pnpm with-env drizzle-kit introspect",
+    "db:push": "pnpm with-env drizzle-kit push",
+    "db:studio": "pnpm with-env drizzle-kit studio",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "with-env": "dotenv -e ../../apps/frontend/.env --"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.33.0",
+    "drizzle-zod": "^0.5.1",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@template/tsconfig": "workspace:*",
+    "@types/node": "^22.4.0",
+    "dotenv-cli": "^7.4.2",
+    "drizzle-kit": "^0.24.0",
+    "typescript": "^5.5.4"
+  }
+}
